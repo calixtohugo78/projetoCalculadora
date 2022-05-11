@@ -13,9 +13,13 @@ calcBody.addEventListener('click', (e) => {
                 calcScreen.innerText = "";
                 break
 
+            case 'C':
+                calcScreen.innerText = calcScreen.innerText.substring(0, calcScreen.innerText.length - 1);
+                break
+
             case '=':
                 printResult(calcScreen.innerText);
-            break
+                break
 
             default:
                 calcScreen.innerText += e.target.innerText
@@ -28,16 +32,7 @@ calcBody.addEventListener('click', (e) => {
 
 const printResult = (stringResult) => {
 
-    let issetDiv = stringResult.indexOf("/");
-    let issetMult = stringResult.indexOf("x");
-    let issetSub = stringResult.indexOf("-");
-    let issetAdd = stringResult.indexOf("+");
-
-    if (issetDiv != -1) {
-        let splitResult = stringResult.split("*");
-
-        console.log(splitResult)
-    }
+    calcScreen.innerText = eval(stringResult);
 
 }
 

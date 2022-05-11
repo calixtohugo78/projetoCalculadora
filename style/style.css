@@ -28,11 +28,14 @@ box-shadow: 1px -1px 14px 5px rgba(255,255,255,0.15);
 
 .calcScreen {
     width: 95%;
+    height: 70px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     border: 1px solid #ccc;
-    padding: 32px 16px;
+    padding: 0 16px;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.3);
-    text-align: right;
     font-size: 1.2em;
     margin: 0 auto 24px auto;
     cursor: pointer;
@@ -71,6 +74,10 @@ box-shadow: 1px -1px 14px 5px rgba(255,255,255,0.15);
     border-radius: 6px;
     font-weight: bold;
     cursor: pointer;
+}
+
+.cmdBtn{
+    width: 48%;
 }
 
 .operationBtn {
